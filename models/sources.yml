@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: bitcoin_cash
+    description: Public Bitcoin Cash blockchain dataset in BigQuery.
+    database: bigquery-public-data
+    schema: crypto_bitcoin_cash
+
+    tables:
+      - name: transactions
+        description: Human-friendly Bitcoin Cash transaction data.
