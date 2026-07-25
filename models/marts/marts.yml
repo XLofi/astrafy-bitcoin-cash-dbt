@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: mart_address_balances
+    description: >
+      Current Bitcoin Cash balances by address based on unspent transaction
+      outputs, excluding addresses that received coinbase outputs.
+
+    columns:
+      - name: address
+        data_tests:
+          - not_null
+          - unique
+
+      - name: balance_satoshis
+        data_tests:
+          - not_null
+
+      - name: balance_bch
+        data_tests:
+          - not_null
