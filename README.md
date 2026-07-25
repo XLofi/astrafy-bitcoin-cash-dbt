@@ -71,7 +71,7 @@ The source currently contains data up to May 13, 2024.
 
 Fixed partition boundaries are used so BigQuery can prune unrelated partitions and reduce the amount of data processed.
 
-The source column `hash` is renamed to `transaction_hash` because `HASH` is a reserved BigQuery keyword and caused generic dbt tests to fail.
+The source column `hash` is renamed to `transaction_hash` to make its meaning explicit and avoid identifier-quoting issues in generated dbt tests.
 
 ### Data mart
 
