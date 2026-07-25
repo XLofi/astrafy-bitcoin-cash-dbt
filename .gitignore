@@ -10,3 +10,5 @@ logs/
 *.key
 *.pem
 *~
+gha-creds-*.json
+*.key.json

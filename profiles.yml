@@ -1,0 +1,14 @@
+bitcoin_cash_analytics:
+  target: ci
+
+  outputs:
+    ci:
+      type: bigquery
+      method: service-account
+      project: "{{ env_var('GCP_PROJECT_ID') }}"
+      dataset: staging
+      location: US
+      keyfile: "{{ env_var('GOOGLE_APPLICATION_CREDENTIALS') }}"
+      threads: 4
+      priority: interactive
+      job_execution_timeout_seconds: 300

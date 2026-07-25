@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: stg_bitcoin_cash_transactions
+    description: >
+      Bitcoin Cash transactions from March, April and May 2024,
+      the three latest calendar months available in the public dataset.
+
+    columns:
+      - name: transaction_hash
+        data_tests:
+          - not_null
+          - unique
+
+      - name: block_timestamp
+        data_tests:
+          - not_null
+
+      - name: block_timestamp_month
+        data_tests:
+          - not_null
